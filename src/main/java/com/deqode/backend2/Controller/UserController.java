@@ -21,7 +21,6 @@ import com.deqode.backend2.Model.Users;
 import com.deqode.backend2.Service.UserService;
 
 @RestController
-@CrossOrigin
 public class UserController {
 
 	@Autowired

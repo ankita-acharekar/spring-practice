@@ -19,18 +19,17 @@ public class SpringpracticeApplication {
 	@Autowired
 	UserRepository userRepository;
 
-	@PostConstruct
-	public void initUsers() {
-		List<Users> users = Stream.of(
-				new Users("user1@gmail.com", "ankita", "ankita123"),
-				new Users("user2@gmail.com", "naman", "naman123"), 
-				new Users("user3@gmail.com", "mahesh", "mahesh123"),
-				new Users("user4@gmail.com", "deqode", "deqode123")).collect(Collectors.toList());
-		userRepository.saveAll(users);
-	}
+//	@PostConstruct
+//	public void initUsers() {
+//		List<Users> users = Stream.of(
+//				new Users("user1@gmail.com", "ankita", "ankita123"),
+//				new Users("user2@gmail.com", "naman", "naman123"), 
+//				new Users("user3@gmail.com", "mahesh", "mahesh123"),
+//				new Users("user4@gmail.com", "deqode", "deqode123")).collect(Collectors.toList());
+//		userRepository.saveAll(users);
+//	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringpracticeApplication.class, args);
 	}
-
 }

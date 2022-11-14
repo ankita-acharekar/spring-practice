@@ -21,7 +21,6 @@ import com.deqode.backend2.Service.UserService;
 import com.deqode.backend2.Utility.JwtTokenUtil;
 
 @RestController
-@CrossOrigin
 public class AuthenticationController {
 
 	@Autowired
