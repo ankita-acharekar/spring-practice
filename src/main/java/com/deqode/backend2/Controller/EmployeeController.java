@@ -80,4 +80,10 @@ public class EmployeeController {
 		logger.info("Deleting user....");
 		return employee;
 	}
+	
+	//Docker
+	@RequestMapping(value = "/api/docker-message", method = RequestMethod.GET, produces = "application/json")
+	public String getMessage() {
+		return "Welcome to Docker-Spring-Application..!!";
+	}
 }
