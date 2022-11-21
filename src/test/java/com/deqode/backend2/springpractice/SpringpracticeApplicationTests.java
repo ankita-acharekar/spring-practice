@@ -37,17 +37,17 @@ class SpringpracticeApplicationTests {
 	@Autowired
 	private UserRepository userRepository;
 
-	@Test
-	public void getAllUsersTest() {
-		when(userRepository.findAll()).thenReturn(Stream.of(new Users("Danile@gmail.com", "Danile101", "Danile101"),
-				new Users("Danile@gmail.com", "Danile102", "Danile102")).collect(Collectors.toList()));
-		assertEquals(2, userService.getAllUsers().size());
-	}
-
-	@Test
-	public void saveUserTest() {
-		Users user = new Users("Danile@gmail.com", "Danile102", "Danile102");
-		when(userRepository.save(user)).thenReturn(user);
-		assertEquals(user, userService.createUser(user));
-	}
+//	@Test
+//	public void getAllUsersTest() {
+//		when(userRepository.findAll()).thenReturn(Stream.of(new Users("Danile@gmail.com", "Danile101", "Danile101"),
+//				new Users("Danile@gmail.com", "Danile102", "Danile102")).collect(Collectors.toList()));
+//		assertEquals(2, userService.getAllUsers().size());
+//	}
+//
+//	@Test
+//	public void saveUserTest() {
+//		Users user = new Users("Danile@gmail.com", "Danile102", "Danile102");
+//		when(userRepository.save(user)).thenReturn(user);
+//		assertEquals(user, userService.createUser(user));
+//	}
 }
